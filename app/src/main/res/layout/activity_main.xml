@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
@@ -22,7 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total_mark"
-                android:textSize="50sp" />
+                android:textSize="50sp"
+                android:textColor="@color/black"/>
             <Button
                 android:id="@+id/button_play"
                 android:gravity="center"
@@ -30,7 +31,8 @@
                 android:textSize="50sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/white" />
+                android:background="@null"
+                />
         </TableRow>
 
         <TableRow
@@ -46,8 +48,9 @@
                 android:id="@+id/seekbar_1"
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:progressDrawable="@color/white" />
+                android:progressDrawable="@color/white"
+                android:layout_marginBottom="10dp"
+                android:thumb="@drawable/ic_pokemon1"/>
 
         </TableRow>
 
@@ -64,8 +67,8 @@
                 android:id="@+id/seekbar_2"
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:progressDrawable="@color/white"/>
+                android:progressDrawable="@color/white"
+                android:thumb="@drawable/ic_pokemon2"/>
         </TableRow>
 
         <TableRow
@@ -81,8 +84,8 @@
                 android:id="@+id/seekbar_3"
                 android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:progressDrawable="@color/white"/>
+                android:progressDrawable="@color/white"
+                android:thumb="@drawable/ic_pokemon3"/>
         </TableRow>
 
     </TableLayout>

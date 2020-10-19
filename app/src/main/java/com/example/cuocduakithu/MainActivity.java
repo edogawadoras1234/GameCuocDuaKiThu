@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (seekBar1.getProgress() == seekBar1.getMax()) {
                     this.cancel();
-                    Toast.makeText(MainActivity.this, "One Win", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Bulbasaur đã chiến thắng", Toast.LENGTH_SHORT).show();
                     btn_play.setVisibility(View.VISIBLE);
                     if (checkBox1.isChecked()) {
                         soDiem += 10;
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (seekBar2.getProgress() == seekBar2.getMax()) {
                     this.cancel();
-                    Toast.makeText(MainActivity.this, "Two Win", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Turtle Squirtle đã chiến thắng", Toast.LENGTH_SHORT).show();
                     btn_play.setVisibility(View.VISIBLE);
                     if (checkBox2.isChecked()) {
                         soDiem += 10;
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (seekBar3.getProgress() == seekBar3.getMax()) {
                     this.cancel();
-                    Toast.makeText(MainActivity.this, "Three Win", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Pikachu đã chiến thắng", Toast.LENGTH_SHORT).show();
                     btn_play.setVisibility(View.VISIBLE);
                     if (checkBox3.isChecked()) {
                         soDiem += 10;
@@ -130,40 +130,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    checkBox2.setChecked(false);
-                    checkBox3.setChecked(false);
-                }
+        checkBox1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                checkBox2.setChecked(false);
+                checkBox3.setChecked(false);
+                Toast.makeText(this, "Bạn đã chọn Bulbasaur", Toast.LENGTH_SHORT).show();
             }
         });
-        checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    checkBox1.setChecked(false);
-                    checkBox3.setChecked(false);
-                }
+        checkBox2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                checkBox1.setChecked(false);
+                checkBox3.setChecked(false);
+                Toast.makeText(this, "Bạn đã chọn Turtle Squirtle", Toast.LENGTH_SHORT).show();
             }
         });
-        checkBox3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    checkBox1.setChecked(false);
-                    checkBox2.setChecked(false);
-                }
+        checkBox3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                checkBox1.setChecked(false);
+                checkBox2.setChecked(false);
+                Toast.makeText(this, "Bạn đã chọn Pikachu", Toast.LENGTH_SHORT).show();
             }
         });
     }
-    public void setEnableCheckbox(){
+
+    public void setEnableCheckbox() {
         checkBox1.setEnabled(true);
         checkBox2.setEnabled(true);
         checkBox3.setEnabled(true);
     }
-    public void setDisableCheckbox(){
+
+    public void setDisableCheckbox() {
         checkBox1.setEnabled(false);
         checkBox2.setEnabled(false);
         checkBox3.setEnabled(false);
